@@ -16,7 +16,7 @@ mongoose.connect(config.mongoURI, { serverSelectionTimeoutMS: 10000 })
   .catch(err => console.error('MongoDB connection error:', err.message));
 
 app.get('/', (req, res) => res.send('Hello World! test'));
-
+app.get('/api/hello', (req, res) => res.send('Hi! test'));
 // 회원가입 (콜백 제거)
 app.post('/api/users/register', async (req, res) => {
   try {
